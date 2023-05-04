@@ -1,7 +1,6 @@
 package com.dti.lembretes.utils;
 
 import java.util.Date;
-import java.text.SimpleDateFormat;
 
 public class DataValidation {
 
@@ -16,8 +15,8 @@ public class DataValidation {
     }
 
     public boolean verificaSeDataEhPosteriorADataAtual(String data) {
-        Date dataAtual = new Date(System.currentTimeMillis());
-        Date dataDoLembrete = new SimpleDateFormat("dd/MM/yyyy").parse(data.toString(), new java.text.ParsePosition(0));
+        Date dataAtual = new Date();
+        Date dataDoLembrete = new Date(data);
         return dataDoLembrete.after(dataAtual);
     }
 }

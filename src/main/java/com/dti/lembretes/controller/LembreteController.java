@@ -15,13 +15,12 @@ public class LembreteController {
 
     @PostMapping("/lembrete")
     public ResponseEntity<?> criaLembrete(@Validated @RequestBody LembreteDTO lembreteDTO) {
-        this.lembreteService.criaLembrete(lembreteDTO);
-        return ResponseEntity.ok().build();
+        return ResponseEntity.ok("Lembrete: " + this.lembreteService.criaLembrete(lembreteDTO) + " criado com sucesso!");
     }
 
     @GetMapping("/lembretes")
     public ResponseEntity<?> listaDeLembretes() {
-        return ResponseEntity.ok(this.lembreteService.listaDeLembretes());
+        return ResponseEntity.ok(this.lembreteService.listaLembretesPorData());
     }
 
     @DeleteMapping("/lembrete/{nomeDoLembrete}")
