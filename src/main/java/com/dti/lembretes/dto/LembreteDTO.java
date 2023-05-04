@@ -1,8 +1,5 @@
 package com.dti.lembretes.dto;
 
-import lombok.Data;
-
-@Data
 public record LembreteDTO(String nomeDoLembrete, String dataDoLembrete) {
 
     /**   O método isDataValida() é responsável por validar a entrada da data do lembrete.

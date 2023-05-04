@@ -17,8 +17,8 @@ public class LembreteService {
     private LembreteRepository lembreteRepository;
 
     public void criaLembrete(LembreteDTO lembreteDTO) {
-        Date data = convertStringToDate(lembreteDTO.getDataDoLembrete());
-        Lembrete lembrete = new Lembrete(lembreteDTO.getNomeDoLembrete(), data);
+        Date data = convertStringToDate(lembreteDTO.dataDoLembrete());
+        Lembrete lembrete = new Lembrete(lembreteDTO.nomeDoLembrete(), data);
         this.lembreteRepository.criaLembrete(lembrete);
     }
 

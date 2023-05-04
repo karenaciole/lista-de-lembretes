@@ -8,18 +8,18 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/lembrete")
+@RequestMapping("/api")
 public class LembreteController {
     @Autowired
     private LembreteService lembreteService;
 
-    @PostMapping
+    @PostMapping("/lembrete")
     public ResponseEntity<?> criaLembrete(@Validated @RequestBody LembreteDTO lembreteDTO) {
         this.lembreteService.criaLembrete(lembreteDTO);
         return ResponseEntity.ok().build();
     }
 
-    @GetMapping
+    @GetMapping("/lembretes")
     public ResponseEntity<?> listaDeLembretes() {
         return ResponseEntity.ok(this.lembreteService.listaDeLembretes());
     }
