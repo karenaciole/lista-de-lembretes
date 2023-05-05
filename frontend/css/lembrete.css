@@ -1,7 +1,8 @@
 .card-cria-lembrete {
-    position: absolute;
-    width: 100vw;
+    width: 40vw;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
     padding: 1rem;
     left: 75px;
     top: 100px;
@@ -9,7 +10,6 @@
 }
 
 .card-cria-lembrete h1 { 
-    display: inline-block;
     font-size: 2rem;
     font-weight: 700;
     color: #E55B5B;
@@ -27,9 +27,19 @@
     padding: 1rem;
     border-radius: 0.688rem;
     border: none;
+    outline: none;
     margin-bottom: 1rem;
 }
 
 .card-cria-lembrete__inputs ::placeholder {
     color: #B8A5A5;
+}
+
+.botao-criar-lembrete {
+    position: absolute;
+    width: 5.31vw;
+    height: 3.80vh;
+    background-color: #E55B5B;
+    border-radius: 2.813rem;
+    border: none;
 }
