@@ -6,14 +6,8 @@
     padding: 1rem;
     left: 75px;
     top: 100px;
+    flex-basis: 40%;
     
-}
-
-.card-cria-lembrete h1 { 
-    font-size: 2rem;
-    font-weight: 700;
-    color: #E55B5B;
-    margin: 1rem;
 }
 
 .card-cria-lembrete__inputs {
@@ -47,3 +41,4 @@
     border: none;
     color: #EFDFDF;
 }
+
