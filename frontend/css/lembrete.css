@@ -1,0 +1,35 @@
+.card-cria-lembrete {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    padding: 1rem;
+    left: 75px;
+    top: 100px;
+    
+}
+
+.card-cria-lembrete h1 { 
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #E55B5B;
+    margin: 1rem;
+}
+
+.card-cria-lembrete__inputs {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+
+.card-cria-lembrete__inputs input {
+    background-color: #EFE3E3;
+    padding: 1rem;
+    border-radius: 0.688rem;
+    border: none;
+    margin-bottom: 1rem;
+}
+
+.card-cria-lembrete__inputs ::placeholder {
+    color: #B8A5A5;
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de lembretes</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/lembrete.css">
+</head>
+<body>
+    <div class="card-cria-lembrete">
+        <h1>Novo lembrete</h1>
+        <form onsubmit="criaLembrete(event)">
+            <div class="card-cria-lembrete__inputs">
+                <input type="text" name="nome" id="nome" placeholder="Nome do lembrete">
+                <input type="text" id="data" placeholder="Data do lembrete (no formato dd/mm/yyyy)">
+            </div>
+            <button type="submit">Criar</button>
+    </div>
+</body>
+</html>
