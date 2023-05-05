@@ -12,12 +12,13 @@
 <body>
     <div class="card-cria-lembrete">
         <h1>Novo lembrete</h1>
-        <form onsubmit="criaLembrete(event)">
+        <form class="form">
             <div class="card-cria-lembrete__inputs">
-                <input type="text" name="nome" id="nome" placeholder="Nome do lembrete">
-                <input type="text" id="data" placeholder="Data do lembrete (no formato dd/mm/yyyy)">
+                <input type="text" name="nomeDoLembrete" placeholder="Nome do lembrete" required />
+                <input type="text" name="dataDoLembrete" placeholder="Data do lembrete (no formato dd/mm/yyyy)" required />
             </div>
-            <button onclick="criaLembrete(event)" class="botao-criar-lembrete" type="submit">Criar</button>
+            <button class="botao-criar-lembrete" type="submit">Criar</button>
+        </form>
     </div>
     <div class="lista-de-lembretes">
         <h1>Lista de lembretes</h1>
@@ -31,4 +32,5 @@
         </div>
     </div>
 </body>
+<script src="js/routers.js"></script>
 </html>
