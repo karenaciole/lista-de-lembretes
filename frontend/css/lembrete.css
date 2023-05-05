@@ -36,10 +36,14 @@
 }
 
 .botao-criar-lembrete {
-    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
     width: 5.31vw;
     height: 3.80vh;
     background-color: #E55B5B;
     border-radius: 2.813rem;
     border: none;
+    color: #EFDFDF;
 }
