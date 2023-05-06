@@ -23,8 +23,12 @@ public class LembreteRepository {
         this.lembretes.put(lembrete.getId(), lembrete);
     }
 
-    public void deletaLembrete(String id) {
-        this.lembretes.remove(id);
+    public Lembrete getLembrete(String id) {
+        return this.lembretes.get(id);
+    }
+
+    public boolean lembreteExiste(String id) {
+        return this.lembretes.containsKey(id);
     }
 
 }

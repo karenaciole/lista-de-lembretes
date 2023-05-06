@@ -29,17 +29,24 @@ public class LembreteService {
     }
 
     public void deletaLembrete(String id) {
+        if (!lembreteExiste(id))
+            throw new IllegalArgumentException("Lembrete com ID: " + id + "não existe!");
+        
         this.lembreteRepository.deletaLembrete(id);
-    }
-
-    public List<Lembrete> listaDeLembretes() {
-        return new ArrayList<>(this.lembreteRepository.getAll());
     }
 
     public List<Lembrete> listaLembretesPorData() {
         List<Lembrete> ordenadoPorData = new ArrayList<>(this.lembreteRepository.getAll());
         ordenadoPorData.sort(Comparator.comparing(Lembrete::getDataDoLembrete));
         return ordenadoPorData;
+    }
+
+    private List<Lembrete> listaDeLembretes() {
+        return new ArrayList<>(this.lembreteRepository.getAll());
+    }
+
+    private boolean lembreteExiste(String id) {
+        return this.lembreteRepository.lembreteExiste(id);
     }
 
     private Date convertStringToDate(String data) {
