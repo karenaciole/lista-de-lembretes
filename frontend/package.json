@@ -1,0 +1,25 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "Front-end do teste técnico - DTI",
+  "main": "main.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karenaciole/lista-de-lembretes.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/karenaciole/lista-de-lembretes/issues"
+  },
+  "homepage": "https://github.com/karenaciole/lista-de-lembretes#readme",
+  "devDependencies": {
+    "jest": "^29.5.0"
+  },
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}
