@@ -19,9 +19,8 @@ public class LembreteRepository {
         return this.lembretes.values();
     }
 
-    public String criaLembrete(Lembrete lembrete) {
+    public void criaLembrete(Lembrete lembrete) {
         this.lembretes.put(lembrete.getId(), lembrete);
-        return lembrete.getId();
     }
 
     public void deletaLembrete(String id) {

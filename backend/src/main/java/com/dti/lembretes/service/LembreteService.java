@@ -18,14 +18,14 @@ public class LembreteService {
     @Autowired
     private LembreteRepository lembreteRepository;
 
-    public String criaLembrete(LembreteDTO lembreteDTO) {
+    public void criaLembrete(LembreteDTO lembreteDTO) {
         if (!checaDataValida(lembreteDTO.dataDoLembrete()))
             throw new IllegalArgumentException("Data inválida!");
 
         Date data = convertStringToDate(lembreteDTO.dataDoLembrete());
         Lembrete lembrete = new Lembrete(lembreteDTO.nomeDoLembrete(), data);
 
-        return this.lembreteRepository.criaLembrete(lembrete);
+        this.lembreteRepository.criaLembrete(lembrete);
     }
 
     public void deletaLembrete(String id) {
