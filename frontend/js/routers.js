@@ -3,8 +3,7 @@
 
 // Path: frontend\js\routers.js
 
-const api = {}
-
+const api = {};
 
 api.criarLembrete = async (lembrete) => {
   url = `http://localhost:7070/api/lembrete`
@@ -19,7 +18,7 @@ api.criarLembrete = async (lembrete) => {
     });
 
     await response.json();
-    return window.alert("Lembrete criado com sucesso!");
+    window.alert("Lembrete criado com sucesso!");
     
   } catch (error) {
     return console.log(error);
@@ -44,6 +43,7 @@ api.getListaDeLembretes = async () => {
         lembretesPorData.set(dataFormatada, []);
       }
       lembretesPorData.get(dataFormatada).push(lembrete);
+
     });
 
     let html = '';
@@ -54,11 +54,12 @@ api.getListaDeLembretes = async () => {
         html += `
         <li>
           <p>
-            ${lembrete.nomeDoLembrete}
-            <button class="delete-lembrete">x</button>
+            <span id="nomeDoLembrete">${lembrete.nomeDoLembrete}</span>
+            <button class="delete-lembrete" onclick="api.deletaLembrete('${lembrete.id}')">x</button>
           </p>
         </li>`;
       });
+      
     });
 
     document.getElementById('lembretesList').innerHTML = html;
@@ -72,3 +73,18 @@ api.getListaDeLembretes = async () => {
 //   document.getElementById('lembretesList').insertAdjacentHTML('beforeend', test);
 // }
 
+api.deletaLembrete = async (id) => {
+  url = `http://localhost:7070/api/lembrete/${id}`
+
+  try {
+    const response = await fetch(url, {
+      method: 'DELETE',
+    });
+
+    await response.json();
+    window.alert("Lembrete deletado com sucesso!");
+    
+  } catch (error) {
+    return console.log(error);
+  }
+}

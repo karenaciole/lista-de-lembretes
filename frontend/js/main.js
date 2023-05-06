@@ -18,3 +18,13 @@ formEl.addEventListener('submit', event => {
 // });
 
 api.getListaDeLembretes();
+
+// const deleteLembrete = document.querySelector('.delete-lembrete');
+
+// deleteLembrete.addEventListener('click', event => {
+//     const idLembrete = deleteLembrete.value; // get the id from the button
+//     api.deleteLembrete(idLembrete);
+//     // also delete the li element
+//     event.target.parentNode.parentNode.remove(); // remove the li
+
+//   });
