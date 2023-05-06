@@ -20,20 +20,5 @@ formEl.addEventListener('submit', event => {
     formEl.reset();
 });
 
-// const ol = document.getElementById('lembretesList')
-
-// api.getListaDeLembretes().then((lembretes = []) => {
-//     ol.innerHTML += lembretes.map(convertListaDeLembretesToLi).join('');
-// });
 
 api.getListaDeLembretes();
-
-// const deleteLembrete = document.querySelector('.delete-lembrete');
-
-// deleteLembrete.addEventListener('click', event => {
-//     const idLembrete = deleteLembrete.value; // get the id from the button
-//     api.deleteLembrete(idLembrete);
-//     // also delete the li element
-//     event.target.parentNode.parentNode.remove(); // remove the li
-
-//   });

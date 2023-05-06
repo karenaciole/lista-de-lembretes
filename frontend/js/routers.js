@@ -1,7 +1,3 @@
-// fetch the localhost:7070/api/lembrete
-// get the criar lembrete method
-
-// Path: frontend\js\routers.js
 
 const api = {};
 
@@ -70,10 +66,6 @@ api.getListaDeLembretes = async () => {
   }
 }
 
-// const adicionaLembreteNaLista = (lembrete) => {
-//   const test = `<li>${lembrete.nomeDoLembrete} ${lembrete.dataDoLembrete} </li>`;
-//   document.getElementById('lembretesList').insertAdjacentHTML('beforeend', test);
-// }
 
 api.deletaLembrete = async (id) => {
   url = `http://localhost:7070/api/lembrete/${id}`
