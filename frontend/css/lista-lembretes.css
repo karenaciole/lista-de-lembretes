@@ -1,8 +1,30 @@
 .lista-de-lembretes {
+    position: relative;
     display: flex;
+    height: 500vw;
     flex-direction: column;
     margin-left: 50vw;
     padding: 1rem;
     top: 100px;
-    height: 500vw;
+}
+
+li { 
+    list-style: none;
+    margin: 1rem;
+}
+
+.lista-de-lembretes .delete-lembrete {
+    background-color: #EC3B3B;
+    height: 1.5rem;
+    width: 1.5rem;
+    color: white;
+    font-size: 0.8rem;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 0.7rem;
+}
+
+.data {
+    font-weight: bold;
 }

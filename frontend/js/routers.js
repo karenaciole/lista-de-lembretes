@@ -48,10 +48,16 @@ api.getListaDeLembretes = async () => {
 
     let html = '';
     lembretesPorData.forEach((lembretes, data) => {
-      html += `<p>${data}</p>`;
+      html += `<span class="data">${data}</span>`;
 
       lembretes.forEach(lembrete => {
-        html += `<li><p>${lembrete.nomeDoLembrete}</li>`;
+        html += `
+        <li>
+          <p>
+            ${lembrete.nomeDoLembrete}
+            <button class="delete-lembrete">x</button>
+          </p>
+        </li>`;
       });
     });
 
