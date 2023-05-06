@@ -61,8 +61,8 @@ api.getListaDeLembretes = async () => {
   }
 }
 
-const adicionaLembreteNaLista = (lembrete) => {
-  const test = `<li>${lembrete.nomeDoLembrete} ${lembrete.dataDoLembrete} </li>`;
-  document.getElementById('lembretesList').insertAdjacentHTML('beforeend', test);
-}
+// const adicionaLembreteNaLista = (lembrete) => {
+//   const test = `<li>${lembrete.nomeDoLembrete} ${lembrete.dataDoLembrete} </li>`;
+//   document.getElementById('lembretesList').insertAdjacentHTML('beforeend', test);
+// }
 
