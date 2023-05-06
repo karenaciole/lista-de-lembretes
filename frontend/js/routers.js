@@ -17,8 +17,10 @@ api.criarLembrete = async (lembrete) => {
       body: JSON.stringify(lembrete),
     });
 
-    await response.json();
-    window.alert("Lembrete criado com sucesso!");
+    if(response.ok) {
+      window.alert("Lembrete criado com sucesso!");
+    }
+    window.location.reload();
     
   } catch (error) {
     return console.log(error);
@@ -81,8 +83,9 @@ api.deletaLembrete = async (id) => {
       method: 'DELETE',
     });
 
-    await response.json();
-    window.alert("Lembrete deletado com sucesso!");
+    if (response.ok) {
+      window.alert("Lembrete deletado com sucesso!");
+    }
     
   } catch (error) {
     return console.log(error);
