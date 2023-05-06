@@ -20,12 +20,12 @@ public class LembreteRepository {
     }
 
     public String criaLembrete(Lembrete lembrete) {
-        this.lembretes.put(lembrete.getNomeDoLembrete(), lembrete);
-        return lembrete.getNomeDoLembrete();
+        this.lembretes.put(lembrete.getId(), lembrete);
+        return lembrete.getId();
     }
 
-    public void deletaLembrete(String nomeDoLembrete) {
-        this.lembretes.remove(nomeDoLembrete);
+    public void deletaLembrete(String id) {
+        this.lembretes.remove(id);
     }
 
 }

@@ -28,8 +28,8 @@ public class LembreteService {
         return this.lembreteRepository.criaLembrete(lembrete);
     }
 
-    public void deletaLembrete(String nomeDoLembrete) {
-        this.lembreteRepository.deletaLembrete(nomeDoLembrete);
+    public void deletaLembrete(String id) {
+        this.lembreteRepository.deletaLembrete(id);
     }
 
     public List<Lembrete> listaDeLembretes() {

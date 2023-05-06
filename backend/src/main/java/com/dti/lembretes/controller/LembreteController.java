@@ -25,8 +25,8 @@ public class LembreteController {
     }
 
     @DeleteMapping("/lembrete/{nomeDoLembrete}")
-    public ResponseEntity<?> deletaLembrete(@Validated @PathVariable String nomeDoLembrete) {
-        this.lembreteService.deletaLembrete(nomeDoLembrete);
+    public ResponseEntity<?> deletaLembrete(@Validated @PathVariable String idDolembrete) {
+        this.lembreteService.deletaLembrete(idDolembrete);
         return ResponseEntity.ok().build();
     }
 
