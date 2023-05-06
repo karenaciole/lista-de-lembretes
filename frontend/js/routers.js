@@ -77,6 +77,7 @@ api.deletaLembrete = async (id) => {
 
     if (response.ok) {
       window.alert("Lembrete deletado com sucesso!");
+      window.location.reload();
     }
     
   } catch (error) {
