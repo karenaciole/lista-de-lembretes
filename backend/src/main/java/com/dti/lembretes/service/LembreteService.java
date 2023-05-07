@@ -18,6 +18,10 @@ public class LembreteService {
     @Autowired
     private LembreteRepository lembreteRepository;
 
+    public LembreteService(LembreteRepository lembreteRepository) {
+        this.lembreteRepository = lembreteRepository;
+    }
+
     public void criaLembrete(LembreteDTO lembreteDTO) {
         if (!checaDataValida(lembreteDTO.dataDoLembrete()))
             throw new IllegalArgumentException("Data inválida!");
